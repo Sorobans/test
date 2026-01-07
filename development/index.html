@@ -1,0 +1,655 @@
+<html>
+<html lang="en">
+
+<!-- Mirrored from warp.zone/development/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jan 2026 21:10:23 GMT -->
+<head>
+  <title>The Devlog</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+  <meta name="viewport"
+    content="height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+
+  <style>
+    body {
+      margin: auto;
+      position: relative;
+
+      background-repeat: repeat;
+      /* Do not repeat the image */
+
+    }
+
+    canvas {
+      outline: none
+    }
+
+    .funnyflex {
+      display: flex;
+      flex-direction: column;
+
+      justify-content: center;
+
+
+    }
+
+    h3 {
+
+      color: black;
+      font-size: 13px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
+
+    h3:link {
+      color: black;
+      font-style: normal;
+      text-decoration: none;
+    }
+
+    h3:visited {
+      color: black;
+      text-decoration: none;
+    }
+
+    h3:active {
+      color: black;
+      text-decoration: none;
+    }
+
+    a:link {
+      color: black;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: black;
+      text-decoration: none;
+    }
+  </style>
+  <!--following needed for gobackbutton-->
+  <script language="JavaScript">
+< !--
+      function MM_preloadImages() { //v3.0
+        var d = document; if (d.images) {
+          if (!d.MM_p) d.MM_p = new Array();
+          var i, j = d.MM_p.length, a = MM_preloadImages.arguments; for (i = 0; i < a.length; i++)
+            if (a[i].indexOf("#") != 0) { d.MM_p[j] = new Image; d.MM_p[j++].src = a[i]; }
+        }
+      }
+
+    function MM_swapImgRestore() { //v3.0
+      var i, x, a = document.MM_sr; for (i = 0; a && i < a.length && (x = a[i]) && x.oSrc; i++) x.src = x.oSrc;
+    }
+
+    function MM_findObj(n, d) { //v3.0
+      var p, i, x; if (!d) d = document; if ((p = n.indexOf("?")) > 0 && parent.frames.length) {
+        d = parent.frames[n.substring(p + 1)].document; n = n.substring(0, p);
+      }
+      if (!(x = d[n]) && d.all) x = d.all[n]; for (i = 0; !x && i < d.forms.length; i++) x = d.forms[i][n];
+      for (i = 0; !x && d.layers && i < d.layers.length; i++) x = MM_findObj(n, d.layers[i].document); return x;
+    }
+
+    function MM_swapImage() { //v3.0
+      var i, j = 0, x, a = MM_swapImage.arguments; document.MM_sr = new Array; for (i = 0; i < (a.length - 2); i += 3)
+        if ((x = MM_findObj(a[i])) != null) { document.MM_sr[j++] = x; if (!x.oSrc) x.oSrc = x.src; x.src = a[i + 2]; }
+    }
+
+    function MM_controlSound(x, _sndObj, sndFile) { //v3.0
+      var i, method = "", sndObj = eval(_sndObj);
+      if (sndObj != null) {
+        if (navigator.appName == 'Netscape') method = "play";
+        else {
+          if (window.MM_WMP == null) {
+            window.MM_WMP = false;
+            for (i in sndObj) if (i == "ActiveMovie") {
+              window.MM_WMP = true; break;
+            }
+          }
+          if (window.MM_WMP) method = "play";
+          else if (sndObj.FileName) method = "run";
+        }
+      }
+      if (method) eval(_sndObj + "." + method + "()");
+      else window.location = sndFile;
+    }
+//-->
+  </script>
+
+
+
+  <script src="ruffle-nightly-2022_03_40-web-selfhosted/ruffle.html"></script>
+</head>
+
+<body bgcolor="#333366" background="../Graphix/darktexturetile.jpg" text="#6666FF" link="#FFCC00" vlink="#FF6666">
+  <center>
+    <div id="funnyflex">
+      <div style=" width:1100;background-size: ;background-image:url(../Graphix/horizmetaltile.gif);">
+        <div id="TitleBarLayer"
+          style=" width:1100px; height:222px; z-index:1;display:table-cell;
+  vertical-align:middle; background-image: url(../Graphix/titlebar_looping.gif); layer-background-image: url(../Graphix/TitleBar.gif);border:black;border-width: 5;border-style: outset;top: 11px">
+          <img src="../Graphix/DevelopmentZoneGraphic.png" alt="Development Zone"
+            style="width:auto; height:200; filter:drop-shadow( 7px 4px 1px #4646afad)">
+        </div>
+      </div>
+      <table id="contentholder" style=" top:5px; width:1100; height:400px">
+        <tbody>
+          <tr>
+            <td align="center"
+              style="display: table-cell; background-size: cover;background-image:url(../Graphix/lightchecker.png);vertical-align: top; width: 200;height: 600;border:black;border-width: 5;border-style: outset;">
+              <div style="padding:10; display:inline-block; filter: drop-shadow(2px 2px 1px rgba(107, 55, 180, 0.75))">
+
+                <h3><a href="#devlog"><img src="../Graphix/icons/monitor1.gif" alt="icon"> Warp Devlog</h3></a>
+                <hr>
+
+                <h3><a href="#characterrefs"><img src="../Graphix/icons/geom1b.gif" alt="icon"> Character Refs</h3></a>
+                <hr>
+                <h3><a href="#tutorials"><img src="../Graphix/icons/qmark.gif" alt="icon"> "Tutorials"</h3></a>
+
+                <hr>
+                <h3><a href="resources.html#defaultdance" target="_blank"><img src="../Graphix/icons/id24.gif" alt="Icon">Resource Center (New Tab)</a></h3>
+
+                <img src="../Graphix/icons/construction.gif"><img src="../Graphix/icons/construction.gif"><img
+                  src="../Graphix/icons/construction.gif">
+                <hr>
+                <p></p>
+                <img src="../Graphix/Nonsense/b_gp6j.jpg" style="justify-content: center;display: inline-block;">
+
+              </div>
+
+            </td><a id="devlog"></a>
+            <td
+              style="background-image:url(../Graphix/horizmetaltile.gif);background-repeat: repeat;width:900;height:600;border:black;border-width: 5;border-style: outset;display: flex;">
+              <div
+                style="background-image:url(../Graphix/emptyframe.png);background-size:cover;width:900; height: 600;vertical-align: top; z-index: 1;position: relative;">
+                <!--content go in here-->
+
+                <div id="devlog"
+                  style="margin-top: 65; margin-left: 10;margin-right:7; z-index: -1; position:relative;overflow-y:auto; height:540px">
+                  <h2>JAN 4TH 2026 <img src="../Graphix/icons/airball1.gif"> HELLO, WORLD, AGAIN </h2>
+                  <hr style="width:60%; left: 0; margin-left: 0; color:mediumslateblue; border-style:groove;">
+                  It's been too long.
+                  <br> to say that "try to get a job in an industry related to what i went to school for" went poorly would be, ah...
+                  <br> an understatement.<br> I was unemployed for 7 months, during which time some bad stuff happened, I discovered why everything's been so hard for me since I turned 21 (I have OCD! Yayyy (sound of loud explosion)), and I played a little game called Great God Grove.
+                  <br> Sidenote: everyone reading this should play Great God Grove. To say it, and the friendships I've made while speedrunning it (oh, hey, I'm a WR speedrunner now - eventually I'll add that to the about me :) ) helped keep me alive in 2025 would not be an exaggeration. <br>
+                  I eventually got a job in a printing center, which, while not directly related to game development, was employment, so 'woohoo' - except. Um have you ever seen an episode of Kitchen Nightmares where it's a family run establishment, and there's a husband and wife team who are constantly screaming at each other, and the staff, and there's raw chicken next to cooked chicken? Yeah, that's what it was like. I quit that job after two months of trying to grin and bear gettin yelled at (do NOT try and grin and bear that kind of workplace, reader, your sanity is not worth the paycheck), gave up the last of my dignity, and applied for a retail petstore job.
+                  <br> guys i kind of love retail petstore job.
+                  <br> like ok it has nothing to do with my schooling and i would rather move into the woods and learn how to use linux and blender than work a full shift as cashier, but I have so much experience with keeping and working with aquariums / zoo exhibits that I am really, really good at the petcare side of the job, and it's fulfilling ! even when i get yelled at for not selling someone a goldfish for a 5 gallon!!! (i would. like to stop getting yelled at but its so much better than the last place oh my god)
+                  <br> during all of this, in December, I realized something. I realized that the OCD thoughts that spiraled out of the AI bubble (may it pop this year, please) was what was keeping me from even thinking about Warp Zone. I realized that I was signifigantly more depressed than I thought I was, and I had neglected my artistic passions for a year and a half - over two, if we consider the starviewer the last major addition to this project. It was kind of upsetting to consider how long it's been. I wanted to have so much more done by the time my birthday rolled around this year, but there's no use in beating myself up about it. 
+                  <br> here's whats going to happen. 
+                  <br> I'm going to slowly add some more of the art i've made to the art-corner, I'm going to add a bit about speedrunning in the about-me, i'm going to finally get the damn shrimp server up and running again once I move all my little guys to their new fancy 16gallon home, and, maybe, just maybe, I'll make progress in getting a bit closer to my actual vision for what Warp Zone should be. <br>
+                Personal life goals : move out of this goddamn house before it kills me, convince retail job to let me be fulltime, or trick an aquarium into paying me money. <br>
+                I hope you're all doing well, sincerely. I'm sorry for just disappearing. I see so many beautiful messages in my guestbook that boil down to "this is cool, its a shame im late / its over" and it just... hits home for me, a little. ADHD is a disease of perpetual disappointment. You can have lots of lofty goals and ideas and passions, and then you can blink, and now you're having to worry about getting health insurance. That gap between the ideas you have and the failure of your body to make them, the feeling that you will die unfinished... It's kind of what Warp Zone's supposed to be about, if i can ever get to the state where i make it. <br>
+                that sounded more intense than i meant it to, im generally doing a lot better than i was last year at this time. again, got a diagnosis! that means actually able to figure out why i was feeling the way i was, and working on it! i still have bad weeks, but i can THINK again, and it's amazing. so, uh, i won't be making any promises on work on this site. I won't tell you i'd like to have something done by X amount of time. All i'll say is... <br> <a href=../archive.html>There's some stuff i'd like you to see one day. </a>
+                  
+                  <hr style="width:60%; left: 0; margin-left: 0; color:mediumslateblue; border-style:groove;">
+                  <h2>JULY 15TH 2024<img src="../Graphix/icons/computer.gif">SHRIMPS ARE BACK</h2>
+                  Well that took longer than anticipated. <br>
+                  So, turns out that Optimum (the internet provider of my apartment building) doesn't allow you to edit your router settings without paying them more money - that's why the shrimp camera was down for so long.
+                  Now that i'm back home, though ( :( ), i can run it again! It's up at warp.zone/aquarium, so please tune in. I'm ordering a macro lens to get hopefully unblurry footage of the little guys. 
+                  <br> I've quit my job that I did not enjoy so that I may work on my portfolio and try and get a job in an industry related to what i went to school for. It's a bit scary, but exciting, and it should allow me to have the brainspace needed to work on Warp Zone for real this time. 
+                  <br> No spoilers, but if I can pull this off, I'll be very happy. Hopefully talk to you all again soon!
+                  <hr style="width:60%; left: 0; margin-left: 0; color:mediumslateblue; border-style:groove;">
+                  <h2>JANUARY 7TH 2024<img src="../Graphix/icons/computer.gif">A LONG NEEDED UPDATE</h2>
+                  Wow, uh. oops. <br>
+                  So I may have been depressedddddd or something? I'm not sure. Maybe burnout?
+                  <br>Whatever it was, i straight up got almost NOTHING done since june. It killed me, to be honest. I really, really wanted to get more things done!
+                  <br>In good news, I'm currently volunteering at an Aquarium and it's the happiest i've been in a while. I'm hoping to use all this newfound positive energy to actually get shit DONE this year. I have a to-do list and deadlines and EVERYTHING.
+                  <br> the focus of today's update was thus:
+                  <li>
+                    <ol>One: Update image gallery to show my own personal work since June</ol>
+                    <ol>Two: Fix my commission page (I'm taking commissions! I've taken some and completed them! Go look!)</ol>
+                    <ol>Three: Finally add people's lovely art from Artfight to my gallery.</ol>
+                  </li>
+                  Other stuff (like getting the shrimp page up and running again, sheesh) planned. Hope to speak to you all before july. :P
+                  <br>OH! AND HOW COULD I FORGET: the owner of warp.zone was very generous and allowed me to take the URL! aaaaaah ;u;
+                  <hr style="width:60%; left: 0; margin-left: 0; color:mediumslateblue; border-style:groove;">
+                 
+                  <h2>JUNE 13TH 2023<img src="../Graphix/icons/computer.gif">STARVIEWER EVENT YIPPEE!!!!</h2>
+                  <hr style="width:60%; left: 0; margin-left: 0; color:mediumslateblue; border-style:groove;">
+                  FINALLY.<br>
+                  the starviewer is. Done. For now.  <br>
+                  I wish it didn't take two years. But it did. It's done now though! 
+                  <br>THANK YOU, DENIS. Without his help in programming the database and accessing it, this still would be undone to this day. Thank you, thank you, thank you. <br>
+                  If you aren't a viewer of my streams, this update is pretty pointless - it's just for accessing items that viewers unlock during the show.<br>
+                  HOWEVER! THIS IS NOT WHERE THIS PROJECT ENDS! We're <b>just getting started.</b><br>
+                  I don't want to spill the beans, so i'll be vague. If and when I ever get this project done, you'll be able to interact with the Warp Zone in a whole new way. It's going to take time, lots of programming and modeling, and yelling. <br>
+                  If you'd like to get behind the scenes information and help me out with development, there's a membership tier on my Ko-Fi that grants access to the Warp Zone development discord. Totally not necessary, i'm working on this no matter what, but it would go a long way towards getting everything done in the next decade. 
+                  <br>I also added a few art pieces and touched up the cabletwo page. See ya!
+                 
+
+
+                  <h2>MARCH 19TH 2023<img src="../Graphix/icons/computer.gif">ARE YOU TELLING ME THAT A SHRIMP???</h2>
+                  <hr style="width:60%; left: 0; margin-left: 0; color:mediumslateblue; border-style:groove;">
+                  well. um. <br>
+                  It's nullcasting. hey folks, long time no post? <br>
+                  The seasonal depression hits hard and does NOT care if you have multiple goals to complete by the end of the month. Unfortunately i don't think my redebut assets will be done in time, but you'll hopefully be pleased to learn that I am making real progress! with animations! and VOICE ACTING (i'm so unimaginably excited you have no idea). when it gets done (if), it's going to be incredible. It may not be done for my birthday, but uh. hopefully before the summer?
+                  <br>NOW ONTO THE CONTEXT FOR THIS UPDATE: SHIMPS. <br>
+                  did you know? i love aquariums, and all sorts of strange little critters that you can keep in your home! my favorite though are shrimp - they are just so cute and active! I decided (in all of my depressed genius) that a second aquarium in my room at all times would help me feel better during the winter months, and somehow that idea spiraled out of control and led to me learning how to self-host webservers and... (takes a deep breath) use linux.<br>
+                  I know! Me? Using a good tool instead of bad stuff? unimaginable! Don't worry though, it went terribly for me lmfao. Debian is good though. love you debian. <br> really, my main issue is that you need to use CLI for things that would be a million times easier if i could just... drag and drop / run an EXE. namely, installing OBS. if i ever need to reinstall obs via CLI again, i'm going to shit a raspberry pi. <br>
+                  I'll spare you the long explanation. TLDR: Null gets a bad idea, spends a lot of money and time on said bad idea, prays to whatever diety is listening that they strike down the creator of (insert-annoying-linux-distribution-here), it miraculously works a week later. <br>
+                  The stream SHOULD (hopefully) start and stop when the lights turn on and off - 11AM EST, 9PM EST. I am formally asking that, if you notice anything going wrong, to please get in contact with me - I am just one wizard, and not a very good one at that. I hope you enjoy watching the sheimps as much as I do. 
+                  Oh - and if you can't find the way to get to aquarium.html normally (i have been informed that my website is 'a labrinyth and bad to navigate'), there's a button in aboutme. 
+                  
+
+
+                  <h2>DECEMBER 19TH 2022<img src="../Graphix/icons/computer.gif">OH GOD ITS ALMOST CHRISTMAS</h2>
+                  <hr style="width:60%; left: 0; margin-left: 0; color:mediumslateblue; border-style:groove;">
+                  I'm Mz. Web wizard, i'm ms. fool<br>
+                  i'm your friend nullcasting, i'm not sure how to finish this rhyme to match the original source material<br>
+                  Anyone else having a hard time during this seasonal depression time frame? I am! Just last week i had an anxiety attack over the concept of <b>the passage of time.</b> Like??? Hello? What's goin' on there?
+                  <br> It's been admittedly a little difficult for me to work on the things I really wish to work on (this website, solo debut assets, warpzone remodel, starviewer). Instead, i've been working on smaller, stupider projects!;
+                  <br>
+                  <ul>
+                    <li>Personal VRChat homeworld with a fishtank that i purchased from Vket. Status: Modeled a whole house using a 1998 Home Depot branded floor planner, now having to redo the whole thing because it's not meant for modern viewing</li>
+                    <li>Several dragon pixel concepts for Dragoncave. Status: Need to redo all the colors on the one i've uploaded to the forums, other two ideas are hilariously underdeveloped</li>
+                    <li>Learn how to use mastodon. Status: Grave danger (why can't i see my like amounts? i need that serotonin, toot platform!!!)</li>
+                  </ul>
+                  My hope for the new year is that i'm able to redebut by my birthday (end of March). We'll just have to see if I can get there!
+                  <br>AS for today's update, I've made a small pack of free to use images for you to use to decorate your site. I was hoping to get even somewhat close to the halloween pak in size, but again, energy LOW right now. I hope you enjoy them, and happy holidays!
+                  <h2>DECEMBER 2ND 2022 <img src="../Graphix/icons/airball1.gif"> THE PASSAGE OF TIME BRINGS ME NO JOY </h2>
+                  <hr style="width:60%; left: 0; margin-left: 0; color:mediumslateblue; border-style:groove;">
+                  Brrr, it's cold out, close that door, please!<br>
+                  ah, that's much better. Hi, it's Null :). Minor updates to the site this time around. I've added like 3 more images to Art Zone (the art gallery in the about me section), and i've <b>attempted.</b> to increase the security of the guestbook.
+                  <br>Hi. hey. you. reading this. do you do backend website development? Do you understand 'authentication' and 'api'? Do you take cash?
+                  <br><b>Please let me hire you.</b><br> Ok but seriously, I'm looking for someone to code a bit of authentication stuff for the starviewer to work. Email or dm me if this is up your alley. This is a cry for help. 
+                  <br>thanks for all sticking around! hoping to actually get more stuff done soon... 
+
+
+
+                  <h2>NOVEMBER 10TH 2022<img src="../Graphix/icons/computer.gif">OH GOD ITS ALMOST DECEMBER</h2>
+                  <hr style="width:60%; left: 0; margin-left: 0; color:mediumslateblue; border-style:groove;">
+                  Hi hi hi it's me "Null's Casting". How are we all enjoying the implosion of twitter?
+                  I've had some folks recently ask me for tips in regards to 3D work / etcetera and figured that it would be a good idea to start doing what every website on here does: compile a huge list of potentially useful links!! ;D
+                  <br>If you have any that I should add, send them to me.
+                  <br>Oh! and just in case twitter fully dies; you can find me at these other places.
+                  <ul>
+                    <li>Posting.Cool (i'm currently a little inactive, but it's a very good forum.)</li>
+                    <li>Tumblr <a href="https://nullcasting.tumblr.com/" target=_blank>(Opens in new tab)</a></li>
+                    <li>Yesterweb's Mastodon @Nullcasting@social.yesterweb.org</li>
+                    <li>Cohost.org (made an account, not approved to post yet, though!)</li>
+                  </ul>
+
+
+                  <h2>OCTOBER 25TH 2022 <img src="../Graphix/icons/computer.gif"> I AM TESTING THE LIMITS OF NEOCITIES FILE UPLOADS</h2>
+                  <hr style="width:60%; left: 0; margin-left: 0; color:mediumslateblue; border-style:groove;">
+                  <p> BOO! Just kidding it's me nullcasting. that's a little 'halloween joker' for you. <br>
+                  So, BIG UPDATE TODAY. I've added the 'art zone' to the about me section. This area is going to essentially act as my digital portfolio, seperate from my IRL professional portfolio, where i can keep all my goodies gadgets graphics and images. It won't work on mobile sorry!<br>The big fun thing i'm hoping to include all the time here is the 'FREE STUFF' section. It is my hope to create many sets of free to use old ass graphics for people to use on their pages. This first one is for HALLOWEEN (which is 6 days away OOPS) so please go download that if you'd like!!</p>
+                  <h2>OCTOBER 4TH 2022 <img src="../Graphix/icons/geom1b.gif"> Clipshow + update info </h2>
+                  <hr style="width:60%; left: 0; margin-left: 0; color:mediumslateblue; border-style:groove;">
+                  <p>Hi, yall!! ... wow, it has been longer than intended. Sorry about that. The start of fall always
+                    signifies a slight uptick in depression (even though i fucking LOVE autumn, so what gives?) so i've
+                    been struggling with motivation for a bit. I think i've finally got a good handle on it, and I can
+                    get back to my favorite hobby: being mad about web design!
+                    <br> did you know? that you cant? style scroll bars in firefox??? ....WHY???? All i want is a
+                    scrollbar with BORDER:OUTSET applied to make it look EXTRUDED and TERRIBLE. web design is a curse.
+                    TANGENT ASIDE, THE NEWS:
+                    <br>FIRSTLY, WE'RE ON THE FRONT PAGE????
+                    <br> dont really have any words besides "hell yes" and "thank you" and "!!!!!!!!!!!!!!!" (i don't
+                    think that last one is a word) like what the fuck 🥺.... its so amazing to see people's reactions to
+                    the site, considering how much i struggle with getting it to work. Thank you thank you thank you!!!
+                    AND, if you've checked out my streams because of the site, <span style="background-color: black;
+      color: white;">THANK YOU THE MOST IN PARTICULAR!!!!!!! </span>
+                    <br>now, onto the update! i've made a small addition to cabletwo.htm; a clip viewer, where i can
+                    upload some of my favorite clips from my past streams for viewing!! I will admit, i won't be able to
+                    tell how objectively funny any of these are to new viewers, but they make even me crack up, and i was the
+                    dang streamer!
+                    <br> I've got some big stuff in the works for this website, AKA actually getting the
+                    starviewer done. I'm in talks with some freelance programmers to help me out since i'm clearly not
+                    great at solo devving. I'm hoping for it to be done very, very soon, excluding all the extra secret stuff i'd like to add to it. 
+                    <br>I'm also working on an announcement vis-a-vi me streaming, but i'll hold off on spoling anything
+                    until it's time. ;)
+                    <br>final note! i'm working on something for the yesterweb halloween event, but that'll take a lil
+                    while longer and i wanted to push an update out. Happy october!
+
+                  <h2>AUGUST 12TH 2022 <img src="../Graphix/icons/airball1.gif"> THE ONE WHERE I PUT OFF THE STARVIEWER
+                    FOR A WHOLE YEAR </h2>
+                  <hr style="width:60%; left: 0; margin-left: 0; color:mediumslateblue; border-style:groove;">
+                  <p>Hi, everyone! long time no update. here's what's new:
+                    <br>firstly, im not going to grad school lol.
+                    <br>Secondly, The model update is much closer to being done; i've been able to do a few tests of it
+                    on my streams!!! (cough cough sundays and wednesdays 6pm EST https://twitch.tv/cabletwo) .... or,
+                    you can watch right from this website by going to warpzone.site/Cabletwo.htm! :) I've embedded a
+                    twitch viewer into this site, included a spot to put a much nicer schedule in the future, plus a
+                    link to the amazing cabletwo neocities maintained by captain arby (o7). I'd like to add much more
+                    functionality to this page in the future.
+                    <br>Finally, i've added the art I recieved from the latest Artfight (plus one piece of fanmail i got
+                    ;u;) to the character gallery. I was unable to successfully get the Misc. gallery to display, so if
+                    you'd like to see that before i have a chance to fix the flash file, go to
+                    [...]/gallery/characters/Misc.
+                    <br>I hope to make many more updates this summer!! It's been far, far too long.
+
+                  <h2>JUNE 18TH 2022 <img src="../Graphix/icons/geom1b.gif"> OH GOD ITS ALMOST JULY </h2>
+                  <hr style="width:60%; left: 0; margin-left: 0; color:mediumslateblue; border-style:groove;">
+                  <p>good morbing, morbheads. it's null casting<br> It's very, very close to artfight. can you feel it
+                    in the air? all the art trades that are going to get made? my time management, going out the window?
+                    <br>
+                    i've finally finished* my redesign of wizona. She's a lot cooler looking now B). I say finished with
+                    an asterisk because the process of getting the model ready for vtubing has hit an unexpected
+                    roadblock: i have no idea how to get the damn mouth to work proper. Somehow, I thought it would be
+                    easier to do than my hacked image plane setup i used to use, but this is NOT the case! I was hoping
+                    to get it done before artfight, but decided to just say "screw it" and upload what the design looks
+                    like, just in case I can't. Anyhow, <a href="https://artfight.net/~Nullcasting"
+                      target="_blank">click here to go to my Artfight page if you'd like. </a> <br>
+                    Goals this summer:
+                    <br>Finish starviewer
+                    <br>get model update working
+                    <br>remake overlays
+                    <br>prepare for grad school
+
+                  <h2>MAY 29TH 2022 <img src="../Graphix/icons/airball1.gif"> HOWDY NEIGHBORS </h2>
+                  <hr style="width:60%; left: 0; margin-left: 0; color:mediumslateblue; border-style:groove;">
+                  <p>HI GUYS ITS NULLCASTING<br>
+                    I've been on vacation. This has impacted both my ability to work on my website and also my ability
+                    to supress complaints about my knees (my knees are so fucking bad) but i have WONDERFUL NEWS!!! I
+                    have made it into the Silicon Valley neighborhood on neo-neighborhoods!!!
+                    I'd like to extend a "hello" and "great 2 be here" to my new neighbors :) and I hope you all enjoy
+                    the rest of May!
+
+                  <h2>MAY 18 2022 <img src="../Graphix/icons/computer.gif"> THE TRIALS AND TRIBULATIONS OF VODS</h2>
+                  <hr style="width:60%; left: 0; margin-left: 0; color:mediumslateblue; border-style:groove;">
+                  <p>
+                    Hey Vsauce, Nullcasting here. It's been a bit, hasn't it?
+                    <br>I've been wholly preoccupied with commissions, preparing for vacation, and playing FFXIV when I
+                    should be doing the first two things, but that doesn't mean I haven't been thinking about SICK SITE
+                    IMPROVEMENTS. One of my main goals was to create a cute way for people to watch old streams they
+                    might have missed, specifically focusing on full game playthroughs <a
+                      href="https://www.youtube.com/watch?v=lpD4EY0Oh9Q" target="_blank">(not to say my one-off streams
+                      can't be funny)</a>
+                    <br>There's been two wrenches thrown into this plan, however. One, I simply do not understand how
+                    image maps work. Two, and more unfortunately, some of the vods didn't archive properly, and thanks
+                    to twitch's commitment to preventing me from having any fun, those vods are likely lost forever. I
+                    still think the streams that remain are FUNNY, but there may be a few context streams here and there
+                    that simply are lost to the ether. Ah, well. I've placed my WIP version of the log on the site. To
+                    view, go to the ABOUT ME section of the site. Enjoy!
+                  </p>
+
+
+
+                  <h2>MAY 06 2022 <img src="../Graphix/icons/computer.gif"> MADE MY OWN GUESTBOOK</h2>
+                  <hr style="width:60%; left: 0; margin-left: 0; color:mediumslateblue; border-style:groove;">
+                  <p>
+                    So, yesterday (5/5/22), suddenly out of nowhere, my original guestbook that was hosted on freegb.net
+                    just... vanished. along with the entire site. Accoding to wikipedia, a 410 error means that whoever
+                    was running the site deleted it deliberately to make my life miserable, so that's awesome! OTL....
+                    essentially, i've lost everyone's very nice messages.
+                    This led me on a spite-filled quest to make my own guestbook. Sadness @sadgrl.online has a great
+                    tutorial that tells you how to do this with PHP and CPanel, but i hate paying money for things, so i
+                    decided to take a trip down the path of darkness and evil: making a guestbook with Google Firebase.
+                    <br>
+                    This should be easy. by all accounts, it really, really should. hell, there's even a tutorial for
+                    using firebase that walks you through, step-by-step, making a guestbook! Fun, right?
+                    <br>
+                    no. web development was a mistake. everything is terribly designed and no one wants you to use their
+                    tools.
+                    <br>
+                    i spent like 6 hours on a voice call with real programmers frank and peter (hi, guys!) who both had
+                    tried doing firebase integration before, and my god it was a nightmare. just... look, if you want to
+                    do it, i encourage you to look at the page source and just try and swap out values. seriously, steal
+                    my code, because i am literally incapable of understanding it now that its written. i will be
+                    completely unable to help you if it doesnt work. it's a miracle that its functioning at all.
+                    <br>
+                    dramaticism aside, if you'd be so inclined to leave a new message on the guestlog, i'd appreciate
+                    that - they're a really great motivational tool for me. :')
+                  </p>
+                  <h2>APRIL 19 2022 <img src="../Graphix/icons/qmark.gif"> Tried writing a tutorial (top 10 webdev
+                    decisions made before disaster)</h2>
+                  <hr style="width:60%; left: 0; margin-left: 0; color:mediumslateblue; border-style:groove;">
+                  <p>
+                    its nullcasting. hey look i've had some folks ask me how to make "retro 3d graphics" so i thought
+                    i'd try my hand at writing some little notes about making 3d stuff look old. it's kind of a word
+                    salad right now lol. one day i will rewrite it
+                  </p>
+
+                  <h2>APRIL 16 2022 <img src="../Graphix/icons/qmark.gif"> DEV UPDATE "OH BOY IM UPDATING THE MODEL AGAIN"
+                  </h2>
+                  <hr style="width:60%; left: 0; margin-left: 0; color:mediumslateblue; border-style:groove;">
+                  <p>well i am stupid and foolish. hi its nullcasting. <br>
+                    so basically here's what happen. i play a funny game on warp zone. we have a great time. i ask chat
+                    who i should raid. Dalm (@dalmationer) links another vtuber with impeccable style, poly
+                    [@PolyAlphanet]. i see their whole setup and i go "well shit i gotta update my model again".
+                    it always happens that i get the thought to do this riiiiiight after making a reference sheet LMAO.
+                    i think it's because working with the model so hands on versus just puppeting it around unconciously
+                    on stream makes me realize how much i can improve it. This does mean i have less time to work on
+                    other things while i overhaul my overlay and stinger and textures and mesh and yadda yadda. <br>
+                    (between you and me, if i had the funds i'd commission someone else to deal with it. i do NOT want
+                    to have to weight paint this jacket again （；´д｀）ゞ )</p>
+                  <h2>APRIL 12 2022 <img src="../Graphix/icons/computer.gif"> ADDED 6 REFERENCE IMAGES</h2>
+                  <hr style="width:60%; left: 0; margin-left: 0; color:mediumslateblue; border-style:groove;">
+                  <p> hello gamers its me again. your friend nullcasting.
+                    <br>i've started the process of making updated character reference sheets both for Artfight 2022 (a
+                    lot of the models changed a LOT over the past year) and also just for my own personal reference :)
+                    there's... a lot of weight painting that needs to be done and i am not looking forward to it in the
+                    future OTL. in the meantime, though, enjoy the updated fancy dancy sheets! theyve got color
+                    palettes* and everything!
+                    <br>*legally just snippets from texture files<br> in the future i need to add a button with a link
+                    to my neocities profile on the front of my site so people don't get lost. someone remind me to do
+                    that ok
+                  </p>
+
+
+                  <h2>APRIL ??? 2022 <img src="../Graphix/icons/computer.gif"> ADDED DEVLOG PAGE</h2>
+                  <hr style="width:60%; left: 0; margin-left: 0; color:mediumslateblue; border-style:groove;">
+                  <p>WOWIE ZOWIE A DEVLOG OH BOY!!!<br>It's been very very funny building this website. i feel like i'm
+                    starting to actually understand how websites work. (i still hate it, though.)
+                    ok so i dont need to do br tags for the paragraph part. awesome!<br>
+                    I will be using this part of the webpage for stuff not in "keyfabe" as it were - talking about
+                    actual development, 3d modeleing, etc. you know, the stuff that typically isn't canon :P
+                    i will hopefully also get around to adding tutorials and other fun stuff. woo!! man, tables are fun!
+                    at first i was really hating it but now that it's working it's my best friend. </p>
+                  <image src="../Graphix/Nonsense/vogue.png" alt="art of midra and waveking"
+                    style="width: 400; height:fit-content">I also made some art. check it out!</image>
+                  <p>This is some more text so i can test the scrolling bar on the right.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc massa orci, convallis non ante at,
+                    rhoncus porta velit. Proin placerat arcu ac eleifend porta. Suspendisse nec magna eu magna fringilla
+                    tempor in et tellus. Cras tempor ornare nisl quis scelerisque. Phasellus at imperdiet sapien.
+                    Pellentesque posuere sodales lorem ut finibus. Donec in vestibulum lectus. Curabitur condimentum
+                    purus efficitur dolor faucibus, ultrices iaculis risus consectetur. Duis feugiat, mauris in aliquam
+                    faucibus, risus diam facilisis lacus, ut egestas erat mauris at mi. In et odio urna. Ut id accumsan
+                    orci, a auctor elit. Cras lacus diam, posuere et nibh vel, rhoncus scelerisque diam. Proin dapibus
+                    posuere luctus. Duis dignissim, orci ac pretium scelerisque, nisi est tempus lectus, venenatis
+                    tristique nisl neque nec massa. Suspendisse facilisis quis nunc eget maximus. Fusce placerat
+                    eleifend leo, id sollicitudin ligula euismod fermentum.
+                  </p>
+                </div></a>
+                <!-- next stuff-->
+
+
+
+            </td>
+
+
+          </tr>
+          <tr>
+            <td>
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+      <img src="../Graphix/Nonsense/microsoft_learn.gif"><img src="../Graphix/Nonsense/geo73.jpg" height="60px"><img
+        src="../Graphix/Nonsense/comput.gif">
+      <a id="characterrefs"></a>
+      <div id="characterReferencesHolder" width="1100px" height="600px"
+        style="overflow-y:auto;background-image:url(../Graphix/horizmetaltile.gif); width: 1090px; height:600px;border:black;border-width: 5;border-style: outset; margin-top: 5px">
+        <h3 style="font-size: 40px;">Character References</h3>
+        <hr>
+        <h3>These files are large!! watch out. they will attacka your puter....</h3>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+               <!--  <img alt="Wizona's art reference" src="references/Wizona-ref.png" width="40%"> -->
+                
+                <!-- <img alt="Midra's art reference" src="references/midra-ref.png" width="40%"> -->
+                <h3>MIDRA || <a href="references/midra-ref.png" target="_blank">OPENS IN NEW TAB</a></h3>
+               <!--  <img alt="Curie's art reference" src="references/Shopkeep-ref.png" width="40%"> -->
+                <h3>CURIE || <a href="references/Shopkeep-ref.png" target="_blank">OPENS IN NEW TAB</a></h3>
+               <!--  <img alt="Cyberbot's art reference" src="references/cyberbot_ref.png" width="40%"> -->
+                <h3>CYBERBOT || <a href="references/cyberbot_ref.png" target="_blank">OPENS IN NEW TAB</a></h3>
+              </td>
+              <td>
+                <h3>WIZONA || <a href="references/Wizona-ref.png" target="_blank">OPENS IN NEW TAB</a></h3>
+               <!--  <img alt="PROTAG's art reference" src="references/Protag-ref.png" width="40%"> -->
+                <h3>PROTAG || <a href="references/Protag-ref.png" target="_blank">OPENS IN NEW TAB</a></h3>
+               <!--  <img alt="Whirlibird's art reference" src="references/Whirlibird-ref.png" width="40%"> -->
+                <h3>WHIRLIBIRD || <a href="references/Whirlibird-ref.png" target="_blank">OPENS IN NEW TAB</a></h3>
+               <!--  <img alt="The Mayor's art reference" src="references/mayor-ref.png" width="35%"> -->
+                <h3>THE MAYOR || <a href="references/mayor-ref.png" target="_blank">OPENS IN NEW TAB</a></h3>
+               <!--  <img alt="Hypertext's art reference" src="references/Hypertext_Ref.png" width="40%"> -->
+                <!-- <h3>HYPERTEXT || <a href="references/Hypertext_Ref.png" target="_blank">OPENS IN NEW TAB</a></h3> -->
+              </td>
+              <td>
+               <!--  <img alt="Waveking's art reference" src="references/waveking-ref.png" width="40%"> -->
+                <h3>WAVEKING || <a href="references/waveking-ref.png" target="_blank">OPENS IN NEW TAB</a></h3>
+                <!-- <img alt="Chrome Devil's art reference" src="references/ChromeDevil-Ref.png" width="40%"> -->
+                <h3>CHECKERS || <a href="references/ChromeDevil-Ref.png" target="_blank">OPENS IN NEW TAB</a></h3>
+             <!--    <img alt="The Professor's art reference" src="references/professor-ref.png" width="40%"> -->
+                <h3>PROFESSOR WATTS || <a href="references/professor-ref.png" target="_blank">OPENS IN NEW TAB</a></h3>
+              </td>
+            </tr>
+            <tr>
+          </tbody>
+        </table>
+
+      </div></a>
+    <!--   <div id="tutorials" width="1100px" height="400px"
+        style="vertical-align: top;overflow-y:auto;background-image:url(/Graphix/startile.gif); width: 1090px;border:black;border-width: 5;border-style: outset; margin-top: 5px">
+        <table>
+
+          <tbody>
+            <tr style="vertical-align:top;">
+              <td style=" height:400px;">
+                <img src="\gallery\characters\Professor\Professor.png" alt="Image of the Professor."
+                  style=" filter: drop-shadow(3 0.2rem 0.25rem rgba(0, 0, 0, 0.2));">
+
+              </td>
+              <td>
+                <marquee behavior="alternate">
+                  <h1
+                    style="text-align: left; color: black; filter: drop-shadow(5 0.2rem 0.25rem rgba(0, 0, 0, 0.2)); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+                    <a id="tutorials">
+                      &#10032;TUTORIALS??? </a>
+                    &#10032;</h1>
+                </marquee>
+                <div
+                  style="overflow-y:auto;background-image:url(/Graphix/horizmetaltile.gif); border:black;border-width: 5;border-style: outset; padding: 5px; ">
+                  <h3>Welcome to the Tutorial center!</h3>
+                  <p>During my time in the 3D/Dev game, i've accumulated a few tips and tricks. Nothing here is
+                    particularly good for professional projects, and i'd highly recommend listening to some reputable
+                    source FIRST, but if you'd like some notes of dubious quality, this is the place to be!</p>
+                </div>
+                <div
+                  style="height:400px;overflow-y:auto;background-image:url(/Graphix/os_8.5_desktop.bmp); border:black;border-width: 5;border-style: outset; padding: 5px;">
+                  <h2
+                    style="color:lightgreen;text-shadow: -1px -1px 10px #fff, 3px 3px px #000;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+
+                    &#10032;Retro CGI principles
+
+                    &#10032;
+                  </h2>
+                  <p style="color:black">I see a lot of people asking about creating retro-looking 3D/computer generated
+                    graphics online, and as the resident "crusty bmp render" enjoyer, i hope I can explain some of the
+                    key elements that make things seem "old" in 3d renders.
+                    <br>Firstly, there is a misconception that all old CGI must be low-poly. This is not the case! While
+                    video games were struggling in the polygon mines, movie / still image projects were able to use high
+                    poly models! In fact, anything that needed to appear realistically smooth needed to have high poly
+                    count, since <a href="https://graphics.pixar.com/opensubdiv/docs/subdivision_surfaces.html"
+                      target="_blank">Pixar hadn't invented subdivision modeling yet</a> (unless you're referring to
+                    Nurbs surfaces, but I still am not sure what those are. Thanks, university!)
+                    Sculpting seems to be less common than it is now, and bump maps (a black and white image that is
+                    used to fake depth from certain camera angles) were much more used than normal/displacement maps
+                    (which can affect the model's verticies). Lots of flat brick walls are not out of place in the realm
+                    of vintage computer graphics. Essentially, you're dealing with smooth surfaces with little detail -
+                    unless you're aiming for retro game aesthetics, in which case, you have no smooth surfaces at all!
+                    The level of detail really fluctuates in gamedev, so i'd reccomend checking out <a
+                      href="https://www.models-resource.com/" target="_blank">https://www.models-resource.com/</a>. It's
+                    a FANTASTIC resource for examining the typical polycount of different game consoles.
+                    Spheres are so annoying in games that a lot early on are just images that are billboarded to face
+                    the player.
+                    TEXTURING
+                    <br>
+                    Movies/still renders have the advantage here again. It is generally less computationally expensive
+                    to make textures "procedurally" by programming a color ramp, or generating a checkerboard, than it
+                    is to load an image in from memory. Additionally, image file sizes were more restrictive in the
+                    past, so textures would be rather low resolution compared to modern times (a popular render
+                    resolution for an entire character texture in the retro playstation art community is 128x128, for
+                    example! Think about how hard it is to get detail into that...)
+                    Not having to render in realtime means artists can assign multiple Materials to a single character /
+                    object, allowing for relatively larger image files to be used. (Woody's eye in toy story was
+                    unlikely on the same texture sheet as his shirt. probably. idk i don't work there). This would incur
+                    larger render times, so if you're aiming to replicate hobbyist renders, I'd stick to mostly
+                    procedural textures.
+                    It's a different story in games. Typically, what you see are lots of very small (32x32) tiling
+                    textures used for surfaces. Code has to be as small as possible to fit on cartridges, and that
+                    limits procedural effects. Characters typically have a single texture sheet (besides a sprite sheet
+                    for expressions, if they are done via image and not via animation). I'd recommend finding ways to
+                    reuse sections of the texture sheet in creative ways with UVS, like stretching a part of a shirt to
+                    make a gradient for the pants, or something. IDK look at <a
+                      href="https://www.models-resource.com/nintendo_64/legendofzeldaocarinaoftime/model/689/"
+                      target="_blank">Shiek's model from LoZ Oraccina of time</a> to understand what i'm talking about.
+                    <br>
+                    The shader model you use is also important. For those who want to not think, just for for lamberts,
+                    blinns, and phongs.
+                    For the rest of us morons, here's a non-exhaustive list of features that you want to use
+                    sparingly/avoid altogether in your shaders:
+                    Do not use: Metallic (does not exist yet), Subsurface scattering (DEFINITELY does not exist yet.
+                    BTW, anyone who complains about how humans look in Toy Story 1 is a coward who doesn't appreciate
+                    that it phyiscally wasn't possible to do skin yet.)
+                    Reflection IN GAMES (simply does NOT exist yet. duplicate your models and put them on the other side
+                    of a plane of glass. Alternatively, <a href="https://www.pauldebevec.com/ReflectionMapping/"
+                      target="_blank">make a reflection map</a> (may not be historically accurate but it feels
+                    right?)<br>
+                    Avoid heavy use:
+                    Transparency (COSTLY!!! if you have it at ALL in games, you either have something be completely
+                    opaque or completely transparent.)
+                    Refraction (Limit your light bounces. Think about how much your little GPU from 1990 would cry if
+                    you tried to render a realistic bubble.)
+                    Reflection (costly. so so costly. even today, this is still really goddamn annoying)
+
+                    <br> very casual guide: if it isn't a property in blinn, lambert, or phong, probably best to avoid
+                    it.
+
+                    <br>
+                    LIGHTING
+                    <br>
+                    This is the big one. The big kahuna. the one i see people mess up ALL THE FUCKIN time. if i had to
+                    pick ONE CHANGE TO MAKE TO YOUR ART that will make it look older, seriously, just change your
+                    lighting setup. you do NOT have ambient occlusion. you do NOT have ambient light bouncing. if you so
+                    much as show me a render that has inderect lighting, you've instantly made your render look TOO NEW.
+                    Stick with spot/point lights (maybe a directional light, as a little treat), and turn down every
+                    single light sample that you can in your renderer of choice. the more light bounces, the less
+                    realistic it is.
+                    Alternatively, if going for real-time, congratulations! you have no lights. you have a single
+                    ambient light. all shadows are faked. :)
+                    <br>
+                    DITHER THE SHIT OUT OF IT
+                    <br>
+                    ok this is one i kind of overuse, but MAN it helps. Older computers simply had less colors they
+                    could see. our modern computers are descendents of shrimp, so they have all the color receptors and
+                    can render all the colors (do not look this up). Simply bring your final render into a photo manip
+                    tool of your choice, and tastefully posterize/dither. Procedural diffusion is a good model to go for
+                    (i personally love windows pattern. it looks so shitty.).
+
+                    <br>
+
+                    i'm probably forgetting details, but i hope this helps some folks who are struggling.
+                  </p>
+
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+
+      </div> -->
+
+      <div id="Footer"
+        style="position:relative; width:1100px; height:100px; z-index:1; background-image: url(../Graphix/footer.gif); border: 1px none #000000">
+        <audio id="buttonSound" src="audio/btn.html"></audio>
+        <p align="center"><a href="../aboutme.html" onMouseOut="MM_swapImgRestore()"
+            onMouseOver="MM_swapImage('gObACK','','Graphix/Buttonz/Back_2.html',1)"><img name="gObACK" border="0"
+              src="../Graphix/Buttonz/Back_1.gif" width="193" height="68"></a></p>
+      </div>
+    </div>
+  </center>
+</body>
